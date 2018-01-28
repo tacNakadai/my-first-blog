@@ -8,6 +8,8 @@
             </div>
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <p>{{ post.text|linebreaksbr }}</p>
+            <!-- ここの部分は承認されたコメント件数の表示だが、現在動いていない。-->
+            <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comment.count }}</a> 
         </div>
     {% endfor %}
 {% endblock %}

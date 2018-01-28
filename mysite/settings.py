@@ -121,6 +121,10 @@ USE_TZ = False
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+
+# redirect toplevel login page (homepage of our blog)
+LOGIN_REDIRECT_URL = '/'
+
 '''
 # update db settings *necessary for Heroku
 import dj_database_url
